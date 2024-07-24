@@ -33,7 +33,7 @@ Features
 Requirements
 ------------
 Currently slstatus works on FreeBSD, Linux and OpenBSD.
-In order to build slstatus you need the Xlib header files.
+In order to build slstatus you need the Xlib header files and the xorg-xsetroot package
 
 
 Installation
@@ -56,8 +56,3 @@ Configuration
 -------------
 slstatus can be customized by creating a custom config.h and (re)compiling the
 source code. This keeps it fast, secure and simple.
-
-
-Todo
-----
-Cleaning up the whole codebase it the goal before thinking about a release.

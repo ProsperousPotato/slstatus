@@ -63,14 +63,13 @@ static const char unknown_str[] = "";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	//{ datetime, "%s",           "%F %T" },
-	{ netspeed_rx, "[▼:%s ", "wlp4s0" },
-	{ netspeed_tx, "▲:%s] ", "wlp4s0" },
-	{ run_command, "[:%4s] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ netspeed_rx, "[▼:%s ", "wlan0" },
+	{ netspeed_tx, "▲:%s] ", "wlan0" },
+	{ run_command, "[%4s] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
 	{ cpu_perc, "[CPU:%s%%] ", NULL	      },
 	{ ram_used, "[RAM:%s] ", NULL       },
 	{ battery_perc, "[BAT: %s%%", "BAT0" },
-	{ battery_state, "%s] ",     "BAT0" },
-//	{ battery_remaining, "H:M", "BAT0" },
+	{ battery_state, "%s ",     "BAT0" },
+	{ battery_remaining, "%s] ", "BAT0" },
 	{ datetime, "%s",           "%a %d %b %r" },
 };
